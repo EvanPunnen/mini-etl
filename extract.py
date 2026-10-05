@@ -18,8 +18,18 @@ def transform_data(data):
     return data
 
 
+def load_data(data):
+    print("\nLoading transformed data...")
+
+    for row in data:
+        print(
+            f"Product: {row['product']} | "
+            f"Quantity: {row['quantity']} | "
+            f"Total: {row['total']}"
+        )
+
+
 if __name__ == "__main__":
     data = extract_data("data/sales.csv")
     data = transform_data(data)
-
-    print(data)
+    load_data(data)

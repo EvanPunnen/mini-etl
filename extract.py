@@ -11,6 +11,9 @@ def extract_data(filename):
 
 def transform_data(data):
     for row in data:
+        if not row["product"]:
+            row["product"] = "Unknown"
+
         row["quantity"] = int(row["quantity"])
         row["price"] = float(row["price"])
         row["total"] = row["quantity"] * row["price"]

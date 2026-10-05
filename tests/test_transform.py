@@ -15,4 +15,4 @@ def test_transform_data():
 
     assert result[0]["quantity"] == 2
     assert result[0]["price"] == 75000.0
-    assert result[0]["total"] == 999999.0
+    assert result[0]["total"] == 150000.0
